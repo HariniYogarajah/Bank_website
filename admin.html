@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Enomy-Finances Admin Portal</title>
+
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f7fb;
+}
+
+
+header{
+
+background:#0B1F3A;
+color:white;
+padding:20px;
+font-size:25px;
+
+}
+
+
+.nav{
+
+background:#16345c;
+padding:10px;
+
+}
+
+
+.nav button{
+
+background:#1FA774;
+color:white;
+border:0;
+padding:10px;
+margin:5px;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+
+
+.page{
+
+display:none;
+padding:30px;
+
+}
+
+
+.active{
+
+display:block;
+
+}
+
+
+
+form{
+
+background:white;
+width:500px;
+padding:25px;
+border-radius:15px;
+
+}
+
+
+input,select,textarea{
+
+width:90%;
+padding:12px;
+margin:10px;
+border:1px solid #ccc;
+border-radius:8px;
+
+}
+
+
+.submit{
+
+background:#1FA774;
+color:white;
+padding:12px 25px;
+border:0;
+border-radius:8px;
+
+}
+
+
+
+.card{
+
+display:inline-block;
+background:white;
+padding:25px;
+width:220px;
+margin:10px;
+border-radius:15px;
+box-shadow:0 5px 15px #ddd;
+
+}
+
+
+
+.number{
+
+font-size:30px;
+color:#1FA774;
+
+}
+
+
+
+table{
+
+width:90%;
+background:white;
+border-collapse:collapse;
+
+}
+
+
+
+th,td{
+
+padding:15px;
+border-bottom:1px solid #ddd;
+
+}
+
+
+
+</style>
+
+
+
+<script>
+
+
+function showPage(page){
+
+
+let pages=document.getElementsByClassName("page");
+
+
+for(let i=0;i<pages.length;i++){
+
+pages[i].classList.remove("active");
+
+}
+
+
+document.getElementById(page).classList.add("active");
+
+
+}
+
+
+
+</script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+🏦 Enomy-Finances Admin Control Panel
+
+</header>
+
+
+
+<div class="nav">
+
+
+<button onclick="showPage('login')">
+Login
+</button>
+
+
+<button onclick="showPage('dashboard')">
+Dashboard
+</button>
+
+
+<button onclick="showPage('users')">
+User Management
+</button>
+
+
+<button onclick="showPage('staff')">
+Staff Management
+</button>
+
+
+<button onclick="showPage('monitor')">
+System Monitor
+</button>
+
+
+<button onclick="showPage('security')">
+Security
+</button>
+
+
+<button onclick="showPage('backup')">
+Backup
+</button>
+
+
+<button onclick="showPage('settings')">
+Settings
+</button>
+
+
+<button onclick="showPage('profile')">
+Profile
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- LOGIN -->
+
+<div id="login" class="page active">
+
+
+<h1>Admin Login</h1>
+
+
+<form>
+
+
+<input placeholder="Admin Email">
+
+
+<input type="password" placeholder="Password">
+
+
+<button class="submit">
+Login
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- DASHBOARD -->
+
+
+<div id="dashboard" class="page">
+
+
+<h1>Admin Dashboard</h1>
+
+
+
+<div class="card">
+
+<h3>Total Users</h3>
+
+<div class="number">
+2000
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Staff Members</h3>
+
+<div class="number">
+50
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Transactions</h3>
+
+<div class="number">
+5000
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>System Status</h3>
+
+<div class="number">
+Online
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- USERS -->
+
+
+<div id="users" class="page">
+
+
+<h1>User Management</h1>
+
+
+<form>
+
+
+<input placeholder="User Name">
+
+
+<input placeholder="Email">
+
+
+<select>
+
+<option>Select Role</option>
+
+<option>Client</option>
+
+<option>Staff</option>
+
+<option>Admin</option>
+
+</select>
+
+
+<select>
+
+<option>Status</option>
+
+<option>Active</option>
+
+<option>Blocked</option>
+
+</select>
+
+
+<button class="submit">
+Add User
+</button>
+
+
+</form>
+
+
+
+
+<h2>User List</h2>
+
+
+<table>
+
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Role</th>
+
+<th>Status</th>
+
+</tr>
+
+
+<tr>
+
+<td>001</td>
+
+<td>John Smith</td>
+
+<td>Client</td>
+
+<td>Active</td>
+
+</tr>
+
+
+<tr>
+
+<td>002</td>
+
+<td>Manager</td>
+
+<td>Staff</td>
+
+<td>Active</td>
+
+</tr>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- STAFF MANAGEMENT -->
+
+
+<div id="staff" class="page">
+
+
+<h1>Staff Management</h1>
+
+
+<form>
+
+
+<input placeholder="Staff Name">
+
+
+<input placeholder="Department">
+
+
+<input placeholder="Email">
+
+
+<select>
+
+<option>Position</option>
+
+<option>Manager</option>
+
+<option>Financial Advisor</option>
+
+<option>Support Staff</option>
+
+</select>
+
+
+<button class="submit">
+
+Add Staff
+
+</button>
+
+
+</form>
+
+
+
+<h2>Staff Records</h2>
+
+
+
+<table>
+
+
+<tr>
+
+<th>Name</th>
+
+<th>Department</th>
+
+<th>Status</th>
+
+</tr>
+
+
+<tr>
+
+<td>David</td>
+
+<td>Finance</td>
+
+<td>Active</td>
+
+</tr>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- MONITOR -->
+
+
+<div id="monitor" class="page">
+
+
+<h1>System Monitoring</h1>
+
+
+
+<div class="card">
+
+Server Status
+
+<h2 class="number">
+Running
+</h2>
+
+</div>
+
+
+
+<div class="card">
+
+Database
+
+<h2 class="number">
+Connected
+</h2>
+
+</div>
+
+
+
+<div class="card">
+
+Application
+
+<h2 class="number">
+Online
+</h2>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SECURITY -->
+
+
+<div id="security" class="page">
+
+
+<h1>Security Logs</h1>
+
+
+
+<table>
+
+
+<tr>
+
+<th>Date</th>
+
+<th>Activity</th>
+
+<th>Status</th>
+
+</tr>
+
+
+<tr>
+
+<td>18/09/26</td>
+
+<td>Admin Login</td>
+
+<td>Success</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>18/09/26</td>
+
+<td>Password Update</td>
+
+<td>Success</td>
+
+</tr>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- BACKUP -->
+
+
+<div id="backup" class="page">
+
+
+<h1>Database Backup</h1>
+
+
+<form>
+
+
+<select>
+
+<option>Backup Type</option>
+
+<option>Full Backup</option>
+
+<option>Database Only</option>
+
+</select>
+
+
+<button class="submit">
+
+Create Backup
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SETTINGS -->
+
+
+<div id="settings" class="page">
+
+
+<h1>System Settings</h1>
+
+
+<form>
+
+
+<input placeholder="Company Name">
+
+
+<input placeholder="Email Settings">
+
+
+<select>
+
+<option>Security Level</option>
+
+<option>High</option>
+
+<option>Medium</option>
+
+<option>Low</option>
+
+</select>
+
+
+<button class="submit">
+
+Save Settings
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PROFILE -->
+
+
+<div id="profile" class="page">
+
+
+<h1>Admin Profile</h1>
+
+
+<form>
+
+
+<input value="System Administrator">
+
+
+<input value="admin@enomy.com">
+
+
+<input placeholder="Change Password">
+
+
+<button class="submit">
+
+Update Profile
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
