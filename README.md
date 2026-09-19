@@ -1,1 +1,1 @@
-# Enomy-Finances
+# Financial application
