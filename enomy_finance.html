@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Enomy-Finances Client Portal</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#f4f7fb;
+}
+
+
+header{
+background:#0B1F3A;
+color:white;
+padding:20px;
+font-size:25px;
+}
+
+
+.nav{
+background:#16345c;
+padding:10px;
+}
+
+
+.nav button{
+background:#1FA774;
+color:white;
+border:0;
+padding:10px;
+margin:5px;
+border-radius:8px;
+cursor:pointer;
+}
+
+
+.page{
+display:none;
+padding:30px;
+}
+
+
+.active{
+display:block;
+}
+
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+margin:15px;
+display:inline-block;
+width:220px;
+box-shadow:0 5px 15px #ddd;
+}
+
+
+.amount{
+font-size:30px;
+color:#1FA774;
+}
+
+
+form{
+background:white;
+padding:25px;
+border-radius:15px;
+width:500px;
+}
+
+
+input,select,textarea{
+
+width:90%;
+padding:12px;
+margin:10px;
+border:1px solid #ccc;
+border-radius:8px;
+
+}
+
+
+.submit{
+
+background:#1FA774;
+color:white;
+border:0;
+padding:12px 25px;
+border-radius:8px;
+
+}
+
+
+table{
+
+width:90%;
+background:white;
+border-collapse:collapse;
+
+}
+
+
+th,td{
+
+padding:15px;
+border-bottom:1px solid #ddd;
+
+}
+
+
+
+</style>
+
+
+<script>
+
+function showPage(page){
+
+let pages=document.getElementsByClassName("page");
+
+for(let i=0;i<pages.length;i++){
+pages[i].classList.remove("active");
+}
+
+document.getElementById(page).classList.add("active");
+
+}
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+
+<header>
+🏦 Enomy-Finances Client Portal
+</header>
+
+
+
+<div class="nav">
+
+<button onclick="showPage('login')">Login</button>
+
+<button onclick="showPage('register')">Register</button>
+
+<button onclick="showPage('dashboard')">Dashboard</button>
+
+<button onclick="showPage('account')">Account</button>
+
+<button onclick="showPage('investment')">Investment</button>
+
+<button onclick="showPage('mortgage')">Mortgage</button>
+
+<button onclick="showPage('transfer')">Transfer</button>
+
+<button onclick="showPage('transactions')">Transactions</button>
+
+<button onclick="showPage('profile')">Profile</button>
+
+<button onclick="showPage('support')">Support</button>
+
+
+</div>
+
+
+
+<!-- LOGIN -->
+
+<div id="login" class="page active">
+
+<h1>Client Login</h1>
+
+
+<form>
+
+<input placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+
+<select>
+<option>Client</option>
+</select>
+
+
+<button class="submit">
+Login
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+<!-- REGISTER -->
+
+
+<div id="register" class="page">
+
+
+<h1>Create Client Account</h1>
+
+
+<form>
+
+
+<input placeholder="Full Name">
+
+<input placeholder="Email">
+
+<input placeholder="Phone Number">
+
+<input placeholder="Address">
+
+<input type="password" placeholder="Create Password">
+
+
+<select>
+
+<option>Select Account Type</option>
+
+<option>Savings Account</option>
+
+<option>Investment Account</option>
+
+</select>
+
+
+<button class="submit">
+Register
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+<!-- DASHBOARD -->
+
+
+<div id="dashboard" class="page">
+
+
+<h1>Welcome John Smith</h1>
+
+
+<div class="card">
+
+<h3>Total Savings</h3>
+
+<div class="amount">
+$25,000
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Investment</h3>
+
+<div class="amount">
+$15,000
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Mortgage</h3>
+
+<div class="amount">
+$120,000
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- ACCOUNT -->
+
+
+<div id="account" class="page">
+
+
+<h1>My Account Details</h1>
+
+
+<form>
+
+
+<input value="John Smith">
+
+<input value="john@email.com">
+
+
+<input value="Savings Account">
+
+
+<input value="$25,000">
+
+
+<button class="submit">
+Update Account
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+<!-- INVESTMENT -->
+
+
+<div id="investment" class="page">
+
+
+<h1>Investment Services</h1>
+
+
+<form>
+
+
+<input placeholder="Investment Amount">
+
+
+<select>
+
+<option>Low Risk</option>
+
+<option>Medium Risk</option>
+
+<option>High Risk</option>
+
+</select>
+
+
+<textarea placeholder="Investment Goal"></textarea>
+
+
+<button class="submit">
+Submit Investment
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+<!-- MORTGAGE -->
+
+
+<div id="mortgage" class="page">
+
+
+<h1>Mortgage Application</h1>
+
+
+<form>
+
+
+<input placeholder="Loan Amount">
+
+
+<input placeholder="Monthly Income">
+
+
+<input placeholder="Employment Details">
+
+
+<textarea placeholder="Reason"></textarea>
+
+
+<button class="submit">
+Apply Mortgage
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+<!-- TRANSFER -->
+
+
+<div id="transfer" class="page">
+
+
+<h1>Money Transfer</h1>
+
+
+<form>
+
+
+<input placeholder="Receiver Account Number">
+
+
+<input placeholder="Amount">
+
+
+<select>
+
+<option>Savings Account</option>
+
+<option>Investment Account</option>
+
+</select>
+
+
+<button class="submit">
+Transfer Money
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- TRANSACTIONS -->
+
+
+<div id="transactions" class="page">
+
+
+<h1>Transaction History</h1>
+
+
+<table>
+
+
+<tr>
+
+<th>Date</th>
+
+<th>Description</th>
+
+<th>Status</th>
+
+</tr>
+
+
+<tr>
+
+<td>10/09/2026</td>
+
+<td>Investment Payment</td>
+
+<td>Completed</td>
+
+</tr>
+
+
+<tr>
+
+<td>15/09/2026</td>
+
+<td>Mortgage Payment</td>
+
+<td>Completed</td>
+
+</tr>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PROFILE -->
+
+
+<div id="profile" class="page">
+
+
+<h1>Edit Profile</h1>
+
+
+<form>
+
+
+<input value="John Smith">
+
+
+<input value="john@email.com">
+
+
+<input placeholder="New Password">
+
+
+<textarea>
+Address
+</textarea>
+
+
+<button class="submit">
+Save Changes
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+<!-- SUPPORT -->
+
+
+<div id="support" class="page">
+
+
+<h1>Customer Support</h1>
+
+
+<form>
+
+
+<input placeholder="Subject">
+
+
+<textarea placeholder="Write Message"></textarea>
+
+
+<button class="submit">
+Send Message
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+</body>
+</html>
